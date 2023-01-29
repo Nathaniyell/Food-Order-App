@@ -14,12 +14,12 @@ const ModalOverlay = props=>{
  
 }
 
-const portalLocation = document.getElementById('overlay')
+const portalLocation = document.getElementById('overlays')
 const Modal =(props)=>{
   return(
     <>
       {ReactDOM.createPortal(<Backdrop />, portalLocation)}
-      {ReactDOM.createPortal(<ModalOverlay />, portalLocation)}
+      {ReactDOM.createPortal(<ModalOverlay>{props.children}</ModalOverlay>, portalLocation)}
     </>
   )
 }

@@ -3,7 +3,7 @@ import {FaShoppingCart} from 'react-icons/fa'
 import classes from './HeaderCartBtn.module.css'
 
  const HeaderCartBtn = props =>{
-  return <button className={classes.button}>
+  return <button className={classes.button} onClick={props.onClick}>
   <span className={classes.icon}>
   <FaShoppingCart />
   </span>
